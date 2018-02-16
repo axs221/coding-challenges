@@ -1,6 +1,15 @@
 import itertools
 
-"""Coding Challenge: Generate all permutations of a list, up to a given number of characters in a string."""
+"""Coding Challenge: Generate all permutations of a list, up to a given number of characters in a string.
+
+Input:
+    items: ['R', 'G', 'B']
+    length: 4
+
+Output:
+    ['RRRR', 'RRRG', 'RRRB', ...rest, 'BBBB']
+
+"""
 available_items = ['R', 'G', 'B']
 
 def flatten(list_of_lists):
@@ -22,6 +31,6 @@ def get_permutations(current_string, items, length):
 
         return flatten(permutations)
 
-results = get_permutations("", available_items, 5)
+results = get_permutations("", available_items, 4)
 
 print(results)
